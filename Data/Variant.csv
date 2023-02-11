@@ -1,0 +1,28 @@
+﻿VariantID,VariantName,VirusID,GeneID,Status,Origin
+101001,Zaire Virus,10001,1110001,Not-Active,Democratic Republic of Congo
+101002,Tai Forrest Virus,10001,1110002,Not-Active,Ivory Coast
+101003,Sudan Virus,10001,1110003,Not-Active,Sudan
+101004,B.1.1.7,10002,1110004,Active,United Kingdom
+101005,B.1.351,10002,1110005,Active,United States
+101006,P.1,10002,1110006,Active,United States
+101007,B.1.427,10002,1110007,Active,India
+101008,HIV-1,10004,1110008,Active,Belgian Congo
+101009,HIV-2,10004,1110009,Active,Senegal
+101010,Variola-Major,10008,1110010,Not-Active,Unknown
+101011,Variola-Minor,10008,1110011,Not-Active,Unknown
+101012,Jordan-N3,10003,1110012,Active,Jordan
+101013,Sudan-N3,10003,1110013,Active,Sudan
+101014,H1N1v,10005,1110014,Active,Mexico
+101015,H3N2v,10005,1110015,Active,Hong Kong
+101016,H5N1v,10005,1110016,Active,China
+101017,Marburg Virus,10006,1110017,Active,Germany
+101018,Raven Virus,10006,1110018,Not-Active,Kenya
+101019,African ZIKV,10010,1110019,Active,Uganda
+101020,Asian ZIKV,10010,1110020,Active,Federated States of Micronesia
+101021,HPV-16 ,10007,1110021,Active,Germany
+101022,HPV-18,10007,1110022,Active,Germany
+101023,HPV-6,10007,1110023,Active,Germany
+101024,HPV-11,10007,1110024,Active,Germany
+101025,Andes Virus,10009,1110025,Active,Chile
+101026,Bayou Virus,10009,1110026,Active,United States
+101027,H7N9v,10005,1110027,Active,China
