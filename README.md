@@ -5,7 +5,7 @@ Virus Information Relational Database
 
 Over the recent years there has been an influx of viruses that have evolved and caused diseases throughouttheplanet.Therefore,thereisaneedtodevelopmethodsorwaystotrackthesediseases and get information from them. In order to this I have implemented a database using SQL.This database keeps a record of 27 different types of viruses and all their related information. Through queries, the researcher/user would be able to find information on particular viruses such as where those viruses originated from, how many vaccines are there for each virus, what is the virus parent virus, what is the virus's length and so on. the user will also be able to delete less important viruses, or update information relating to the viruses too. Below are the system details of the database.
 
-# Entities,Fields,andDataTypes
+# Entities,Fields,and Data Types
 
 ## Variant Entity
 
@@ -18,9 +18,9 @@ Over the recent years there has been an influx of viruses that have evolved and 
 | **Status** | VARCHAR(10) | The status will be inserted as either "active" or "not-active". If "active" is used, then only 6 characters are needed if "not- active" is used then 10 characters are used. Since we do not know how many characters will be used at which instance its better to use VARCHAR as it is more flexible than CHAR and can saves pace. |
 | **Origin** | VARCHAR(40) | Some origin locations may have long names,and some have short so it better to use VARCHAR as it is more flexible. |
 
-**Primary**** Key:**VariantID
+**Primary Key:** VariantID
 
-**Foreign**** Key's:**VirusID,GeneID
+**Foreign Key's:** VirusID,GeneID
 
 ## Gene Entity
 
@@ -30,9 +30,9 @@ Over the recent years there has been an influx of viruses that have evolved and 
 | **GeneType** | VARCHAR(10) | A virus has either DNA or RNA gene and is called a DNA virus or an RNA virus.These genes are further classified as positive single strain or double strain for RNA and DNA. Example of value: "ssRNA(-) ", "dsDNA". As you can seethe length differs for each value therefore it isbetter to useVARCHAR in this case as it is more flexible and saves space. |
 | **GeneLength** | INT(11) | Gene lengths can go as high as 11 digits so the best data type to use is INT as the value will be in integers and set it to 11 digits |
 
-**Primary**** Key:**GeneID
+**Primary Key:** GeneID
 
-## VirusEntity
+## Virus Entity
 
 | **Attributes** | **DataType** | **Explanation** |
 | --- | --- | --- |
@@ -41,9 +41,9 @@ Over the recent years there has been an influx of viruses that have evolved and 
 | **Year_Discovered** | INT(4) | Year contains only 4 digits so its better to use INT. |
 | **First_Origin** | VARCHAR(40) | Some Origin locations may hav every long names and some would have short names so its better to use VARCHAR over CHAR as it is flexible and will save space.Example of longname:"Democratic Republic Of Congo" |
 
-**Primary**** Key:**VirusID
+**Primary Key:** VirusID
 
-## Variant_Location_Entity
+## Variant Location Entity
 
 | **Attributes** | **DataType** | **Explanation** |
 | --- | --- | --- |
@@ -51,11 +51,11 @@ Over the recent years there has been an influx of viruses that have evolved and 
 | **LocationID** | INT(3) | Same as in Locations table |
 | **Climate** | VARCHAR(10) | Climate length is not fixed hence it is better to use VARCHAR as it is more flexible than CHAR. |
 
-**Primary**** Key:**VariantID,LocationID
+**Primary Key:** VariantID,LocationID
 
-**Foreign**** Key:**VariantID,LocationID
+**Foreign Key:** VariantID,LocationID
 
-## LocationEntity
+## Location Entity
 
 | **Attributes** | **DataType** | **Explanation** |
 | --- | --- | --- |
@@ -63,18 +63,18 @@ Over the recent years there has been an influx of viruses that have evolved and 
 | **CountryName** | VARCHAR(30) | Country Name value length is not fixed as some countries have long names and some countries have short names.Therefore, it is better to use VARCHAR as it is more flexible compared to CHAR. |
 | **Population** | INT(11) | Population of countries are numeric as they can be counted.The length is put as 11 because there could be up to a billion people in a country. Example: India has more than a billion citizens. |
 
-**Primary-Key:** LocationID
+**Primary Key:** LocationID
 
-## Variant_HostEntity
+## Variant-Host Entity
 
 | **Attributes** | **DataType** | **Explanation** |
 | --- | --- | --- |
 | **VariantID** | INT(7) | Same as inVariant Table |
 | **HostID** | INT(5) | Same as in Host Table |
 
-**Primary-Key:** VariantID,HostID
+**Primary Key:** VariantID,HostID
 
-**Foreign-Key:** VariantID,HostID
+**Foreign Key:** VariantID,HostID
 
 ## Host Entity
 
@@ -84,9 +84,9 @@ Over the recent years there has been an influx of viruses that have evolved and 
 | **Host_Name** | VARCHAR(15) | The value length of this attribute is not fixed as some values could be long and some short. Therefore, it is better to use VARCHAR instead of CHAR as it is more flexible. |
 | **Host_Type** | VARCHAR(15) | Sam eas Host_Name |
 
-**Primary-Key:** HostID
+**Primary Key:** HostID
 
-## Transmission-ModeEntity
+## Transmission-Mode Entity
 
 | **Attributes** | **DataType** | **Explanation** |
 | --- | --- | --- |
@@ -94,20 +94,20 @@ Over the recent years there has been an influx of viruses that have evolved and 
 | **TransmissionID** | INT(6) | Same as in Transmission Table |
 | **Risk** | VARCHAR(9) | Risk levels have four type "Very High","High", "Moderate", "Low". Since each of these types are not fixed in length it is better to use varchar for this as it is more flexible than char and would save up more space. |
 
-**Primary-Key:** VariantID,TransmissionID
+**Primary Key:** VariantID,TransmissionID
 
-**Foreign-Key:** VariantID,TransmissionID
+**Foreign Key:** VariantID,TransmissionID
 
-## TransmissionEntity
+## Transmission Entity
 
 | **Attributes** | **DataType** | **Explanation** |
 | --- | --- | --- |
 | **TransmissionID** | INT(6) | TransmissionID is a primary key. It is better for primary keysto benumeric asitisfastertomatchascomparedto text. |
 | **TransmissionType** | VARCHAR(20) | TransmissionType value would be a text value and could have various lengths hence the data type used should be flexible. That is why VARCHAR is used. |
 
-**Primary-Key:** TransmissionID
+**Primary Key:** TransmissionID
 
-## Variant-VaccineEntity
+## Variant-Vaccine Entity
 
 | **Attributes** | **DataType** | **Explanation** |
 | --- | --- | --- |
@@ -115,9 +115,9 @@ Over the recent years there has been an influx of viruses that have evolved and 
 | **VaccineID** | INT(6) | Same as Vaccine Table |
 | **Vaccine_Status** | VARCHAR(3) | The status will be inserted as "A" for available,"N-A"for not available or"P" for pending.Therefore,the length of it can be either 1 or 3.Since the length of the value is not fixed it is better to use VARCHAR instead of CHAR as VARCHAR is more flexible. |
 
-**Primary-Key:** VariantID,VaccineID
+**Primary Key:** VariantID,VaccineID
 
-**Foreign-Key:** VariantID,VaccineID
+**Foreign Key:** VariantID,VaccineID
 
 ## Vaccine Entity
 
@@ -126,7 +126,7 @@ Over the recent years there has been an influx of viruses that have evolved and 
 | **VaccineID** | INT(6) | VaccineID is a primary key.It is better for primary keys to be numeric as it is faster to match as compared to text. |
 | **VaccineName** | VARCHAR(10) | Vaccines can have either long or short names therefore VARCHAR is used as it is more flexible. |
 
-**Primary-Key:** VaccineID
+**Primary Key:** VaccineID
 
 ## Researchers Entity
 
@@ -136,9 +136,9 @@ Over the recent years there has been an influx of viruses that have evolved and 
 | ResearcherID | VARCHAR(7) | Same as Researcher Table |
 | Status\_of\_Research | VARCHAR(15) | States either if the research is complete or ongoing therefore the length is not set for the value so its better to use VARCHAR for this as it is more flexible and saves up more space when compared to CHAR. |
 
-**Primary**** Key ****:** VariantID,ResearcherID
+**Primary Key:**  VariantID,ResearcherID
 
-**Foreign**** Key:**VariantD,ResearcherID
+**Foreign Key:** VariantD,ResearcherID
 
 ## Researcher Entity
 
@@ -146,7 +146,7 @@ Over the recent years there has been an influx of viruses that have evolved and 
 | --- | --- | --- |
 | ResearcherID | INT(7) | ResearcherID is a primary key.It is better for primary keys to be numeric as it isfasterto match as compared to text. |
 | ResearcherName | VARCHAR(40) | Australian Government sets about 100 characters including spaces, apostrophes, and hyphens for names. (Source: Australian Home Affairs Ministry).And since names can be any length, its not fixed hence better to use VARCHAR. |
-| Institution | VARCHAR(40) | Some institution names are very long such as Western Sydney University which has 25 characters there are somewhichareevenlongerespecially if it is in another language so the data type should be flexible to cater to this. Hence, we should use varchar for this data type as it is more flexible and saves up more space. |
+| Institution | VARCHAR(40) | Some institution names are very long such as Western Sydney University which has 25 characters there are some which are even longer especially if it is in another language so the data type should be flexible to cater to this. Hence, we should use varchar for this data type as it is more flexible and saves up more space. |
 
 **Primary Key:** ResearcherID
 
