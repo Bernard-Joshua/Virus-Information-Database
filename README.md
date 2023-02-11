@@ -7,7 +7,7 @@ Over the recent years there has been an influx of viruses that have evolved and 
 
 # Entities,Fields,andDataTypes
 
-## VariantEntity
+## Variant Entity
 
 | **Attributes** | **DataType** | **Explanation** |
 | --- | --- | --- |
