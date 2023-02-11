@@ -3,7 +3,7 @@ Virus Information Relational Database
 
 # Overview
 
-Over the recent years there has been an influx of viruses that have evolved and caused diseases throughouttheplanet.Therefore,thereisaneedtodevelopmethodsorwaystotrackthesediseases and get information from them. In order to this I have implemented a database using SQL.This database keeps a record of 27 different types of viruses and all their related information. Through queries, the researcher/user would be able to find information on particular viruses such as where those viruses originated from, how many vaccines are there for each virus, what is the virus parent virus, what is the virus's length and so on. the user will also be able to delete less important viruses, or update information relating to the viruses too. Below are the system details of the database.
+Over the recent years there has been an influx of viruses that have evolved and caused diseases throughout the planet.Therefore,there is a need to develop methods or ways to track these diseases and get information from them. In order to this I have implemented a database using SQL.This database keeps a record of 27 different types of viruses and all their related information. Through queries, the researcher/user would be able to find information on particular viruses such as where those viruses originated from, how many vaccines are there for each virus, what is the virus parent virus, what is the virus's length and so on. the user will also be able to delete less important viruses, or update information relating to the viruses too. Below are the system details of the database.
 
 # Entities,Fields,and Data Types
 
